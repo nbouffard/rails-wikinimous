@@ -7,4 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-10.times { Article.create(title: Faker::Name.name, content: Faker::Lorem.paragraph) }
+10.times { Article.create(title: Faker::Book.title, content: Faker::Lorem.paragraph) }
