@@ -1,0 +1,17 @@
+.nav-bar {
+  background-color: rgb(240, 244, 246);
+  border: 1px solid rgb(203, 201, 201);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav-bar-text {
+  text-decoration: none;
+  color: rgb(105, 103, 103);
+  font-size: 19px;
+}
+
+.nav-bar-text:hover {
+  color: rgb(44, 44, 44);
+}
