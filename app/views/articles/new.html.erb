@@ -1,3 +1,17 @@
-<h1>Create new article</h1>
-
-<%= render "form", article: @article %>
+<div class="nav-bar">
+<%= render "navigation" %>
+</div>
+<div class="container edit-article">
+  <div class="row">
+    <div class="col-12 col-6 mx-auto">
+      <h1 class="title">New article</h1>
+      <div class="form">
+        <%= render "form", article: @article %>
+      </div>
+      <div class="btn-container">
+        <%= link_to "Back", articles_path,  class: "link-decoration-none"%>
+      </div>
+    </div>
+  </div>
+</div>
+<i ></i>

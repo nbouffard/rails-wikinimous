@@ -1,5 +1,22 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.content %></p>
-<%= link_to 'Home', articles_path %>
-<%= link_to 'Edit article', edit_article_path(@article) %>
-<%= link_to "Delete article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<div class="nav-bar">
+  <%= render "navigation" %>
+</div>
+<div class="container"></div>
+  <div class="row">
+    <div class="col-12 col-md-6 mx-auto">
+      <div class="show-title">
+        <h1><%= @article.title %></h1>
+        <i><%= link_to "", edit_article_path(@article), class: "fa-solid fa-pencil icon" %></i>
+        <i><%= link_to "", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-regular fa-trash-can icon" %></i>
+      </div>
+      <div class="show-content">
+        <p><%= @article.content %></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<%# <i class="fa-regular fa-trash-can fa-beat"></i> hover %>
+<%# <i class="fa-solid fa-pencil fa-beat"></i> hover %>

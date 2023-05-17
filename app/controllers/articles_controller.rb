@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
+    # set_article
   end
 
   def new
@@ -15,22 +15,28 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.save
-    redirect_to articles_path
+    if @article.save
+      redirect_to article_path(@article)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
-
+    # set_article
   end
 
   def update
-
-    @article.update(article_params)
-    redirect_to articles_path
+    # set_article
+    if @article.update(article_params)
+      redirect_to article_path(@article)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
-
+    # set_article
     @article.destroy
     redirect_to articles_path, status: :see_other
   end
